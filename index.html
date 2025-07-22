@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NAM Weed Identification App</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+</head>
+<body>
+  <div class="container">
+    <img src="weed-logo.avif" alt="weed logo" class="logo" />
+    <h1>NAM WEED<br />IDENTIFICATION App</h1>
+
+    <div class="image-display" id="image-display">
+      <span style="color: white;"></span>
+    </div>
+
+    <input type="file" accept="image/*" id="upload-image" style="display: none" />
+    <button class="button" onclick="document.getElementById('upload-image').click()">
+      <i class="fas fa-upload"></i> Upload Weed Picture
+    </button>
+
+    <input type="file" accept="image/*" id="take-picture" capture="environment" style="display: none" />
+    <button class="button" onclick="takePicture()">
+      <i class="fas fa-camera"></i> Take Weed Picture
+    </button>
+
+    <div id="recommendation">
+      REMOVAL METHOD:
+    </div>
+
+    <div id="result-box">
+      <span id="removal-result"></span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
